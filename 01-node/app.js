@@ -1,19 +1,12 @@
-// npm = global command
+const http = require('http');
+const fs = require('fs');
 
-// local dependency
-// npm i package
-
-// global dependency
-// npm i -g
-// sudo install -g (mac)
-
-// package.json = manifest file
-// manual approach in package.json
-// npm init step by step
-// npm init -y auto
-
-const _ = require('lodash');
-const items = [1, [2, [3, [4]]]];
-console.log(items);
-const newItems = _.flattenDeep(items);
-console.log(newItems);
+http
+  .createServer((req, res) => {
+    // const text = fs.readFileSync('./content/big.txt', 'utf-8');
+    // res.end(text);
+    const fileStream = fs.createReadStream('./content/big.txt', 'utf-8');
+    fileStream.on('open', () => fileStream.pipe(res));
+    fileStream.on('error', (err) => res.end(err));
+  })
+  .listen(3000);
