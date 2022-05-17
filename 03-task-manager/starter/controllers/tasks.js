@@ -28,7 +28,9 @@ const getTask = async (req, res) => {
 };
 
 const updateTask = async (req, res) => {
-  res.send('update');
+  try {
+    res.send('update');
+  } catch (error) {}
 };
 
 const deleteTask = async (req, res) => {
