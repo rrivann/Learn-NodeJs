@@ -9,3 +9,5 @@
 ## 04-store-api = expressjs + mongodb + express async error + processing data in mongoose
 
 ## 05-JWT-Basics = expressjs + JWT + http-status-codes
+
+## 06 jobs-api = expressjs + JWT + http-status-codes + monggodb + Authentication + Testing API
