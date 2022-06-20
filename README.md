@@ -11,3 +11,7 @@
 ## 05-JWT-Basics = expressjs + JWT + http-status-codes
 
 ## 06 jobs-api = expressjs + JWT + http-status-codes + monggodb + Authentication + Testing API
+
+## project = project i ever made
+
+## js-dicoding = learn js from dicoding
