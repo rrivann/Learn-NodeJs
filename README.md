@@ -1,5 +1,3 @@
-# Learn-BackEnd
+### Learn-JavaScript Basic From Dicoding
 
-### Branches
-
-1. NodeJs-ExpressJs-FreeCodeCamp = learn NodeJs and ExpressJs from FreeCodeCamp
+1. fundamental-js = learn basic and fundamental javascript
