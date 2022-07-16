@@ -4,7 +4,7 @@ const requestListener = (request, response) => {
   response.setHeader('Content-Type', 'text/html');
   response.statusCode = 200;
 
-  const {method, url} = request;
+  const { method, url } = request;
 
   if (url === '/') {
     if (method === 'GET') {
@@ -26,7 +26,7 @@ const requestListener = (request, response) => {
 
       request.on('end', () => {
         body = Buffer.concat(body).toString();
-        const {name} = JSON.parse(body);
+        const { name } = JSON.parse(body);
         response.end(`<h1>Halo, ${name}! Ini adalah halaman about</h1>`);
       });
     } else {
