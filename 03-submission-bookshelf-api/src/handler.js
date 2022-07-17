@@ -139,17 +139,15 @@ const getAllBooksHandler = (request) => {
     return {
       status: 'success',
       data: {
-        books: books.map(({ id, name, publisher }) => {
-          const newBooks = [];
-          if (name.includes(nameQuery)) {
-            newBooks.push({
-              id,
-              name,
-              publisher,
-            });
-          }
-          return newBooks;
-        }),
+        books: books
+          .filter(({ name }) =>
+            name.toLowerCase().includes(nameQuery.toLowerCase()),
+          )
+          .map(({ id, name, publisher }) => ({
+            id,
+            name,
+            publisher,
+          })),
       },
     };
   }
