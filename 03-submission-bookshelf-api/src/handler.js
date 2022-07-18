@@ -141,7 +141,7 @@ const getAllBooksHandler = (request) => {
       data: {
         books: books
           .filter(({ name }) =>
-            name.toLowerCase().includes(nameQuery.toLowerCase()),
+            name.toLowerCase().includes(nameQuery.toLowerCase())
           )
           .map(({ id, name, publisher }) => ({
             id,
