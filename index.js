@@ -1,16 +1,7 @@
-function fetchUsername() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve('JSUser');
-    }, 3000);
-  });
+function multiply(num) {
+  total = num * num;
 }
 
-console.log('Fetching username...');
-fetchUsername()
-  .then((value) => {
-    console.log(`You are logged in as ${value}`);
-  })
-  .finally(() => {
-    console.log('Welcome!');
-  });
+const result = multiply(3);
+
+console.log(result);
