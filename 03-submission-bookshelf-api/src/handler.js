@@ -1,3 +1,5 @@
+/* eslint-disable function-paren-newline */
+/* eslint-disable comma-dangle */
 const { nanoid } = require('nanoid');
 const books = require('./books');
 
